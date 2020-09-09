@@ -1,7 +1,8 @@
 from rest_framework import serializers
-from .models import MovieData
+from .models import Moviedata
 
-class MovieSerializers(serializers.ModelSerializer):
+class MovieSerializer(serializers.ModelSerializer):
     class Meta:
-        movie = MovieData
-        feilds = ['id', 'name', 'duration', 'rating']
+        model = Moviedata
+        fields = ['id', 'name', 'duration', 'rating']
+
